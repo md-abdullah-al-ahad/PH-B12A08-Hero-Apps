@@ -1,19 +1,19 @@
 import React from "react";
-import { Link } from "react-router";
-import logo from "../../assets/logo.png";
+import { Link, NavLink } from "react-router";
+import logo from "../../../public/logo.png";
 import { FaGithub } from "react-icons/fa";
 const Navbar = () => {
   const links = (
     <>
-      <Link to="/">
+      <NavLink to="/">
         <li className="">Home</li>
-      </Link>
-      <Link to="/Apps">
+      </NavLink>
+      <NavLink to="/Apps">
         <li className="">Apps</li>
-      </Link>
-      <Link to="/Installations">
+      </NavLink>
+      <NavLink to="/Installations">
         <li className="">Installations</li>
-      </Link>
+      </NavLink>
     </>
   );
   return (
