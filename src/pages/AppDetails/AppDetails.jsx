@@ -3,6 +3,7 @@ import { useParams, useLoaderData } from "react-router";
 import downloadImg from "../../../public/icon-downloads.png";
 import ratingImg from "../../../public/icon-ratings.png";
 import iconReviewImg from "../../../public/icon-review.png";
+import AppErrorPage from "../AppErrorPage/AppErrorPage";
 import {
   BarChart,
   Bar,
@@ -21,8 +22,8 @@ const AppDetails = () => {
 
   if (!app) {
     return (
-      <div className="flex justify-center items-center min-h-screen">
-        <h2 className="text-2xl font-bold text-red-600">App not found</h2>
+      <div className="">
+        <AppErrorPage />
       </div>
     );
   }
@@ -36,9 +37,7 @@ const AppDetails = () => {
   return (
     <div className="bg-gray-50 min-h-screen py-8">
       <div className="w-full max-w-[1440px] mx-auto bg-white border-t border-gray-200 shadow-sm px-8 py-10">
-        {/* Top Section */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-start gap-10 w-full">
-          {/* Left: App Image */}
           <div className="flex justify-center md:justify-start w-full md:w-auto">
             <img
               src={app.image}

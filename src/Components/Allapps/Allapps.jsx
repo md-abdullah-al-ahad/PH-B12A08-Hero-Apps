@@ -1,6 +1,7 @@
 import React from "react";
 import downloadImg from "../../../public/icon-downloads.png";
 import ratingImg from "../../../public/icon-ratings.png";
+import { Link } from "react-router";
 const Allapps = ({ data }) => {
   const totalDownloads = (amount) => {
     if (amount >= 1000000000) {
@@ -17,8 +18,9 @@ const Allapps = ({ data }) => {
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-10 max-w-[1440px] mx-auto pb-10">
         {data.map((app) => (
-          <div
+          <Link
             key={app.id}
+            to={`/Apps/${app.id}`}
             className="bg-white rounded-lg shadow p-3 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer"
           >
             {/* Image Section */}
@@ -53,7 +55,7 @@ const Allapps = ({ data }) => {
                 </span>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </>
