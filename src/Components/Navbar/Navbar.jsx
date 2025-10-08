@@ -57,13 +57,15 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <button
+        <a
           className="cursor-pointer flex items-center gap-2 justify-center px-4 py-2 text-white font-medium 
          bg-gradient-to-r from-[#632EE3] to-[#9F62F2] rounded-sm"
+          target="_blank"
+          href="https://github.com/md-abdullah-al-ahad"
         >
           <FaGithub />
           <p>Contribute</p>
-        </button>
+        </a>
       </div>
     </div>
   );

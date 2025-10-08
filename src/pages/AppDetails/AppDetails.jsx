@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, useLoaderData } from "react-router";
+import { useParams, useLoaderData, useOutletContext } from "react-router";
 import downloadImg from "../../../public/icon-downloads.png";
 import ratingImg from "../../../public/icon-ratings.png";
 import iconReviewImg from "../../../public/icon-review.png";
@@ -18,7 +18,10 @@ import {
 const AppDetails = () => {
   const { id } = useParams();
   const data = useLoaderData();
+  const { installedApps, handleInstallApp, handleUninstallApp } =
+    useOutletContext();
   const app = data.find((app) => app.id === parseInt(id));
+  const isInstalled = installedApps.includes(parseInt(id));
 
   if (!app) {
     return (
@@ -85,19 +88,37 @@ const AppDetails = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-8">
-              <button className="bg-green-500 text-white px-8 py-3 rounded-md text-base font-medium hover:bg-green-600 transition">
-                Install Now ({app.size}) MB
-              </button>
+            <div className="mt-8 flex gap-4">
+              {!isInstalled ? (
+                <button
+                  onClick={() => handleInstallApp(app.id)}
+                  className="bg-green-500 text-white px-8 py-3 rounded-md text-base font-medium hover:bg-green-600 transition"
+                >
+                  Install Now ({app.size} MB)
+                </button>
+              ) : (
+                <>
+                  <button
+                    disabled
+                    className="bg-gray-400 text-white px-8 py-3 rounded-md text-base font-medium cursor-not-allowed"
+                  >
+                    Installed ✓
+                  </button>
+                  <button
+                    onClick={() => handleUninstallApp(app.id)}
+                    className="bg-red-500 text-white px-8 py-3 rounded-md text-base font-medium hover:bg-red-600 transition"
+                  >
+                    Uninstall
+                  </button>
+                </>
+              )}
             </div>
           </div>
         </div>
 
         <hr className="my-8 border-gray-300" />
         <div>
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-            Ratings Breakdown
-          </h2>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-6">Ratings</h2>
 
           <div className="w-full h-80">
             <ResponsiveContainer width="100%" height="100%">
