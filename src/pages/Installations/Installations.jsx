@@ -59,7 +59,7 @@ const Installations = () => {
         <div className="flex flex-col gap-3">
           {sortedApps.length === 0 ? (
             <div className="text-center text-gray-500 py-10">
-              No installed apps found.
+              <p className="mb-10">No installed apps found.</p>
               <br />
               <Link
                 to="/Apps"
