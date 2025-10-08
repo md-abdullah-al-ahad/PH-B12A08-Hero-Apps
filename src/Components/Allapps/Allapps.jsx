@@ -16,40 +16,46 @@ const Allapps = ({ data }) => {
   };
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-10 max-w-[1440px] mx-auto pb-10">
-        {data.map((app) => (
-          <Link
-            key={app.id}
-            to={`/Apps/${app.id}`}
-            className="bg-white rounded-lg shadow p-3 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer"
-          >
-            <div className="w-full h-[300px] bg-gray-200 rounded-md overflow-hidden p-5">
-              <img
-                src={app.image}
-                alt={app.title}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="text-lg font-semibold text-[#0b1d3a] mt-3">
-              {app.title}
-            </h3>
-            <div className="flex items-center justify-between mt-3">
-              <div className="flex items-center gap-1 bg-green-50 px-2 py-1 rounded">
-                <img src={downloadImg} alt="download" className="w-4 h-4" />
-                <span className="text-green-600 font-medium text-sm">
-                  {totalDownloads(app.downloads)}
-                </span>
+      {data.length === 0 ? (
+        <div className="text-center mt-10 pb-10 mb-60">
+          <h2 className="text-2xl font-semibold text-gray-600">No App Found</h2>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-10 max-w-[1440px] mx-auto pb-10">
+          {data.map((app) => (
+            <Link
+              key={app.id}
+              to={`/Apps/${app.id}`}
+              className="bg-white rounded-lg shadow p-3 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer"
+            >
+              <div className="w-full h-[300px] bg-gray-200 rounded-md overflow-hidden p-5">
+                <img
+                  src={app.image}
+                  alt={app.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div className="flex items-center gap-1 bg-orange-50 px-2 py-1 rounded">
-                <img src={ratingImg} alt="star" className="w-4 h-4" />
-                <span className="text-orange-600 font-medium text-sm">
-                  {app.ratingAvg}
-                </span>
+              <h3 className="text-lg font-semibold text-[#0b1d3a] mt-3">
+                {app.title}
+              </h3>
+              <div className="flex items-center justify-between mt-3">
+                <div className="flex items-center gap-1 bg-green-50 px-2 py-1 rounded">
+                  <img src={downloadImg} alt="download" className="w-4 h-4" />
+                  <span className="text-green-600 font-medium text-sm">
+                    {totalDownloads(app.downloads)}
+                  </span>
+                </div>
+                <div className="flex items-center gap-1 bg-orange-50 px-2 py-1 rounded">
+                  <img src={ratingImg} alt="star" className="w-4 h-4" />
+                  <span className="text-orange-600 font-medium text-sm">
+                    {app.ratingAvg}
+                  </span>
+                </div>
               </div>
-            </div>
-          </Link>
-        ))}
-      </div>
+            </Link>
+          ))}
+        </div>
+      )}
     </>
   );
 };
