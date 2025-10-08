@@ -45,10 +45,12 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex items-center justify-center">
-          <a href="">
+          <a href="/">
             <img className="w-[30px] h-[30px]" src={logo} alt="" />
           </a>
-          <a className="btn btn-ghost text-xl">HERO.IO</a>
+          <a href="/" className="btn btn-ghost text-xl">
+            HERO.IO
+          </a>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
