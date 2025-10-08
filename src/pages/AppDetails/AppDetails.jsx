@@ -156,6 +156,12 @@ const AppDetails = () => {
               </BarChart>
             </ResponsiveContainer>
           </div>
+          <div>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4 mt-10">
+              Description
+            </h2>
+            <p className="text-gray-700">{app.description}</p>
+          </div>
         </div>
       </div>
     </div>
