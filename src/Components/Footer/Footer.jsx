@@ -36,8 +36,6 @@ const Footer = () => {
               </a>
             </div>
           </div>
-
-          {/* Links section */}
           <div className="flex flex-wrap justify-between flex-1 gap-8">
             <div>
               <h3 className="font-semibold mb-3 text-gray-700">Products</h3>
