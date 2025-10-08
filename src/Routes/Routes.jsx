@@ -13,10 +13,12 @@ const Routes = createBrowserRouter([
         index: true,
         path: "/",
         Component: Home,
+        loader: () => fetch("../../src/assets/trendingData/trendingData.json"),
       },
       {
         path: "/Apps",
         Component: Apps,
+        loader: () => fetch("../../src/assets/appsData/appsData.json"),
       },
       {
         path: "/Installations",

@@ -18,11 +18,11 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-wrap justify-center items-center gap-4">
-          <button className="w-full sm:w-auto min-w-[170px] flex justify-center items-center gap-2 p-2 outline outline-1 outline-[#D2D2D2] rounded bg-white hover:shadow-md transition">
+          <button className="w-full sm:w-auto min-w-[170px] flex justify-center items-center gap-2 p-2 outline-1 outline-[#D2D2D2] rounded bg-white hover:shadow-md transition">
             <img src={playstore} alt="Google Play" />
             <p>Google Play</p>
           </button>
-          <button className="w-full sm:w-auto min-w-[170px] flex justify-center items-center gap-2 p-2 outline outline-1 outline-[#D2D2D2] rounded bg-white hover:shadow-md transition">
+          <button className="w-full sm:w-auto min-w-[170px] flex justify-center items-center gap-2 p-2 outline-1 outline-[#D2D2D2] rounded bg-white hover:shadow-md transition">
             <img src={appstore} alt="App Store" />
             <p>App Store</p>
           </button>

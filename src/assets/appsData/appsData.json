@@ -126,7 +126,7 @@
     ]
   },
   {
-    "image": "../../../public/x.png",
+    "image": "../../../public/twitter.png",
     "title": "X (Twitter)",
     "companyName": "X Corp.",
     "id": 8,
@@ -216,7 +216,7 @@
     ]
   },
   {
-    "image": "../../../public/microsoftteams.png",
+    "image": "../../../public/business.png",
     "title": "Microsoft Teams",
     "companyName": "Microsoft Corporation",
     "id": 13,
@@ -396,7 +396,7 @@
     ]
   },
   {
-    "image": "../../../public/googlechrome.png",
+    "image": "../../../public/chrome.png",
     "title": "Google Chrome",
     "companyName": "Google LLC",
     "id": 23,
@@ -414,7 +414,7 @@
     ]
   },
   {
-    "image": "../../../public/googlemaps.png",
+    "image": "../../../public/maps.png",
     "title": "Google Maps",
     "companyName": "Google LLC",
     "id": 24,

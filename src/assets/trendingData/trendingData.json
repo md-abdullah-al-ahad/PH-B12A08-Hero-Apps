@@ -1,0 +1,74 @@
+[
+  {
+    "id": 7,
+    "title": "YouTube",
+    "companyName": "Google LLC",
+    "ratingAvg": 4.5,
+    "downloads": 10000000000,
+    "reviews": 160000000,
+    "image": "../../../public/youtube.png"
+  },
+  {
+    "id": 3,
+    "title": "WhatsApp Messenger",
+    "companyName": "Meta Platforms, Inc.",
+    "ratingAvg": 4.5,
+    "downloads": 5000000000,
+    "reviews": 150000000,
+    "image": "../../../public/whatsapp.png"
+  },
+  {
+    "id": 6,
+    "title": "TikTok",
+    "companyName": "ByteDance Ltd.",
+    "ratingAvg": 4.5,
+    "downloads": 5000000000,
+    "reviews": 120000000,
+    "image": "../../../public/tiktok.png"
+  },
+  {
+    "id": 4,
+    "title": "Instagram",
+    "companyName": "Meta Platforms, Inc.",
+    "ratingAvg": 4.4,
+    "downloads": 5000000000,
+    "reviews": 140000000,
+    "image": "../../../public/instagram.png"
+  },
+  {
+    "id": 14,
+    "title": "Gmail",
+    "companyName": "Google LLC",
+    "ratingAvg": 4.5,
+    "downloads": 10000000000,
+    "reviews": 120000000,
+    "image": "../../../public/gmail.png"
+  },
+  {
+    "id": 24,
+    "title": "Google Maps",
+    "companyName": "Google LLC",
+    "ratingAvg": 4.5,
+    "downloads": 10000000000,
+    "reviews": 120000000,
+    "image": "../../../public/maps.png"
+  },
+  {
+    "id": 22,
+    "title": "Facebook",
+    "companyName": "Meta Platforms, Inc.",
+    "ratingAvg": 4.2,
+    "downloads": 5000000000,
+    "reviews": 180000000,
+    "image": "../../../public/facebook.png"
+  },
+  {
+    "id": 15,
+    "title": "ChatGPT",
+    "companyName": "OpenAI",
+    "ratingAvg": 4.8,
+    "downloads": 10000000,
+    "reviews": 25000000,
+    "image": "../../../public/chatgpt.png"
+  }
+]
