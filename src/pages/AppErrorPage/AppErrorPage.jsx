@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import notFoundImg from "../../assets/images/App-Error.png";
 const AppErrorPage = () => {
   return (
-    <div className="bg-gray-100 py-30">
+    <div className="bg-gray-100 py-20">
       <div className="flex flex-col justify-center items-center gap-5 pt-20 pb-10">
         <img src={notFoundImg} alt="" />
         <h1 className="text-4xl text-[#001931]">OPPS!! APP NOT FOUND</h1>
