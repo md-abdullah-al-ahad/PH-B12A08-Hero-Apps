@@ -1,5 +1,5 @@
 import React from "react";
-import notFoundImg from "../../../public/error-404.png";
+import notFoundImg from "../../assets/images/error-404.png";
 const ErrorPage = () => {
   return (
     <div className="bg-gray-100">

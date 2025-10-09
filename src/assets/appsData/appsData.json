@@ -1,6 +1,6 @@
 [
   {
-    "image": "../../../public/discord.png",
+    "image": "/discord.png",
     "title": "Discord",
     "companyName": "Discord Inc.",
     "id": 1,
@@ -18,7 +18,7 @@
     ]
   },
   {
-    "image": "../../../public/spotify.png",
+    "image": "/spotify.png",
     "title": "Spotify",
     "companyName": "Spotify AB",
     "id": 2,
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "image": "../../../public/whatsapp.png",
+    "image": "/whatsapp.png",
     "title": "WhatsApp Messenger",
     "companyName": "Meta Platforms, Inc.",
     "id": 3,
@@ -54,7 +54,7 @@
     ]
   },
   {
-    "image": "../../../public/instagram.png",
+    "image": "/instagram.png",
     "title": "Instagram",
     "companyName": "Meta Platforms, Inc.",
     "id": 4,
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "image": "../../../public/snapchat.png",
+    "image": "/snapchat.png",
     "title": "Snapchat",
     "companyName": "Snap Inc.",
     "id": 5,
@@ -90,7 +90,7 @@
     ]
   },
   {
-    "image": "../../../public/tiktok.png",
+    "image": "/tiktok.png",
     "title": "TikTok",
     "companyName": "ByteDance Ltd.",
     "id": 6,
@@ -108,7 +108,7 @@
     ]
   },
   {
-    "image": "../../../public/youtube.png",
+    "image": "/youtube.png",
     "title": "YouTube",
     "companyName": "Google LLC",
     "id": 7,
@@ -126,7 +126,7 @@
     ]
   },
   {
-    "image": "../../../public/twitter.png",
+    "image": "/twitter.png",
     "title": "X (Twitter)",
     "companyName": "X Corp.",
     "id": 8,
@@ -144,7 +144,7 @@
     ]
   },
   {
-    "image": "../../../public/netflix.png",
+    "image": "/netflix.png",
     "title": "Netflix",
     "companyName": "Netflix, Inc.",
     "id": 9,
@@ -162,7 +162,7 @@
     ]
   },
   {
-    "image": "../../../public/reddit.png",
+    "image": "/reddit.png",
     "title": "Reddit",
     "companyName": "Reddit Inc.",
     "id": 10,
@@ -180,7 +180,7 @@
     ]
   },
   {
-    "image": "../../../public/trello.png",
+    "image": "/trello.png",
     "title": "Trello",
     "companyName": "Atlassian",
     "id": 11,
@@ -198,7 +198,7 @@
     ]
   },
   {
-    "image": "../../../public/airbnb.png",
+    "image": "/airbnb.png",
     "title": "Airbnb",
     "companyName": "Airbnb, Inc.",
     "id": 12,
@@ -216,7 +216,7 @@
     ]
   },
   {
-    "image": "../../../public/business.png",
+    "image": "/business.png",
     "title": "Microsoft Teams",
     "companyName": "Microsoft Corporation",
     "id": 13,
@@ -234,7 +234,7 @@
     ]
   },
   {
-    "image": "../../../public/gmail.png",
+    "image": "/gmail.png",
     "title": "Gmail",
     "companyName": "Google LLC",
     "id": 14,
@@ -252,7 +252,7 @@
     ]
   },
   {
-    "image": "../../../public/chatgpt.png",
+    "image": "/chatgpt.png",
     "title": "ChatGPT",
     "companyName": "OpenAI",
     "id": 15,
@@ -270,7 +270,7 @@
     ]
   },
   {
-    "image": "../../../public/uber.png",
+    "image": "/uber.png",
     "title": "Uber",
     "companyName": "Uber Technologies Inc.",
     "id": 16,
@@ -288,7 +288,7 @@
     ]
   },
   {
-    "image": "../../../public/zoom.png",
+    "image": "/zoom.png",
     "title": "Zoom",
     "companyName": "Zoom Video Communications, Inc.",
     "id": 17,
@@ -306,7 +306,7 @@
     ]
   },
   {
-    "image": "../../../public/telegram.png",
+    "image": "/telegram.png",
     "title": "Telegram",
     "companyName": "Telegram FZ-LLC",
     "id": 18,
@@ -324,7 +324,7 @@
     ]
   },
   {
-    "image": "../../../public/pinterest.png",
+    "image": "/pinterest.png",
     "title": "Pinterest",
     "companyName": "Pinterest, Inc.",
     "id": 19,
@@ -342,7 +342,7 @@
     ]
   },
   {
-    "image": "../../../public/amazon.png",
+    "image": "/amazon.png",
     "title": "Amazon Shopping",
     "companyName": "Amazon Mobile LLC",
     "id": 20,
@@ -360,7 +360,7 @@
     ]
   },
   {
-    "image": "../../../public/paypal.png",
+    "image": "/paypal.png",
     "title": "PayPal",
     "companyName": "PayPal Holdings, Inc.",
     "id": 21,
@@ -378,7 +378,7 @@
     ]
   },
   {
-    "image": "../../../public/facebook.png",
+    "image": "/facebook.png",
     "title": "Facebook",
     "companyName": "Meta Platforms, Inc.",
     "id": 22,
@@ -396,7 +396,7 @@
     ]
   },
   {
-    "image": "../../../public/chrome.png",
+    "image": "/chrome.png",
     "title": "Google Chrome",
     "companyName": "Google LLC",
     "id": 23,
@@ -414,7 +414,7 @@
     ]
   },
   {
-    "image": "../../../public/maps.png",
+    "image": "/maps.png",
     "title": "Google Maps",
     "companyName": "Google LLC",
     "id": 24,
@@ -432,7 +432,7 @@
     ]
   },
   {
-    "image": "../../../public/linkedin.png",
+    "image": "/linkedin.png",
     "title": "LinkedIn",
     "companyName": "LinkedIn Corporation",
     "id": 25,

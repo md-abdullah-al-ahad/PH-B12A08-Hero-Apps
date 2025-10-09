@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router";
-import logo from "../../../public/logo.png";
+import logo from "/src/assets/images/logo.png";
 import { FaGithub } from "react-icons/fa";
 const Navbar = () => {
   const links = (

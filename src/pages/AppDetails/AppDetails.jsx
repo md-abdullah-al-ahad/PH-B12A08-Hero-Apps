@@ -1,8 +1,8 @@
 import React from "react";
 import { useParams, useLoaderData, useOutletContext } from "react-router";
-import downloadImg from "../../../public/icon-downloads.png";
-import ratingImg from "../../../public/icon-ratings.png";
-import iconReviewImg from "../../../public/icon-review.png";
+import downloadImg from "../../assets/images/icon-downloads.png";
+import ratingImg from "../../assets/images/icon-ratings.png";
+import iconReviewImg from "../../assets/images/icon-review.png";
 import AppErrorPage from "../AppErrorPage/AppErrorPage";
 import {
   BarChart,

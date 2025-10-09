@@ -6,7 +6,7 @@
     "ratingAvg": 4.5,
     "downloads": 10000000000,
     "reviews": 160000000,
-    "image": "../../../public/youtube.png"
+    "image": "/youtube.png"
   },
   {
     "id": 3,
@@ -15,7 +15,7 @@
     "ratingAvg": 4.5,
     "downloads": 5000000000,
     "reviews": 150000000,
-    "image": "../../../public/whatsapp.png"
+    "image": "/whatsapp.png"
   },
   {
     "id": 6,
@@ -24,7 +24,7 @@
     "ratingAvg": 4.5,
     "downloads": 5000000000,
     "reviews": 120000000,
-    "image": "../../../public/tiktok.png"
+    "image": "/tiktok.png"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "ratingAvg": 4.4,
     "downloads": 5000000000,
     "reviews": 140000000,
-    "image": "../../../public/instagram.png"
+    "image": "/instagram.png"
   },
   {
     "id": 14,
@@ -42,7 +42,7 @@
     "ratingAvg": 4.5,
     "downloads": 10000000000,
     "reviews": 120000000,
-    "image": "../../../public/gmail.png"
+    "image": "/gmail.png"
   },
   {
     "id": 24,
@@ -51,7 +51,7 @@
     "ratingAvg": 4.5,
     "downloads": 10000000000,
     "reviews": 120000000,
-    "image": "../../../public/maps.png"
+    "image": "/maps.png"
   },
   {
     "id": 22,
@@ -60,7 +60,7 @@
     "ratingAvg": 4.2,
     "downloads": 5000000000,
     "reviews": 180000000,
-    "image": "../../../public/facebook.png"
+    "image": "/facebook.png"
   },
   {
     "id": 15,
@@ -69,6 +69,6 @@
     "ratingAvg": 4.8,
     "downloads": 10000000,
     "reviews": 25000000,
-    "image": "../../../public/chatgpt.png"
+    "image": "/chatgpt.png"
   }
 ]

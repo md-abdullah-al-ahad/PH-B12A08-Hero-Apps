@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useOutletContext, Link } from "react-router";
-import downloadImg from "../../../public/icon-downloads.png";
-import ratingImg from "../../../public/icon-ratings.png";
+import downloadImg from "../../assets/images/icon-downloads.png";
+import ratingImg from "../../assets/images/icon-ratings.png";
 
 const Installations = () => {
   const { installedApps, handleUninstallApp } = useOutletContext();

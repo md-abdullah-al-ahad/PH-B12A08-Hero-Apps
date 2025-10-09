@@ -1,7 +1,7 @@
 import React from "react";
-import appstore from "../../../public/appstore.png";
-import playstore from "../../../public/googleplay.png";
-import heroimg from "../../../public/hero.png";
+import appstore from "../../assets/images/appstore.png";
+import playstore from "../../assets/images/googleplay.png";
+import heroimg from "../../assets/images/hero.png";
 const Hero = () => {
   return (
     <div className="bg-gray-100">

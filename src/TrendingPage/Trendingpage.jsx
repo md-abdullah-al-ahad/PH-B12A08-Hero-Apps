@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router";
-import downloadImg from "../../public/icon-downloads.png";
-import ratingImg from "../../public/icon-ratings.png";
+import downloadImg from "../assets/images/icon-downloads.png";
+import ratingImg from "../assets/images/icon-ratings.png";
 import { Link } from "react-router";
 const Trendingpage = ({ data }) => {
   const navigate = useNavigate();
