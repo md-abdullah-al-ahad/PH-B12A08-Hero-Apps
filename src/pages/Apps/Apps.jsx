@@ -1,12 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CiSearch } from "react-icons/ci";
 import { useLoaderData } from "react-router";
 import Allapps from "../../Components/Allapps/Allapps";
+import LoadingSpinner from "../../Components/LoadingSpinner/LoadingSpinner";
+
 const Apps = () => {
   const data = useLoaderData();
-  const [search, setsearch] = useState("");
+  const [search, setSearch] = useState("");
+  const [isSearching, setIsSearching] = useState(false);
+  const [filteredApps, setFilteredApps] = useState(data);
 
-  const filteredApps = data.filter((app) => app.title.includes(search));
+  useEffect(() => {
+    setIsSearching(true);
+    const timeoutId = setTimeout(() => {
+      const filtered = data.filter((app) =>
+        app.title.toLowerCase().includes(search.toLowerCase())
+      );
+      setFilteredApps(filtered);
+      setIsSearching(false);
+    }, 500);
+
+    return () => clearTimeout(timeoutId);
+  }, [search, data]);
   return (
     <div className="bg-gray-100">
       <div className="flex flex-col items-center gap-6 max-w-[1440px] mx-auto pt-10 px-5">
@@ -25,7 +40,7 @@ const Apps = () => {
               type="text"
               placeholder="Search Apps"
               value={search}
-              onChange={(e) => setsearch(e.target.value)}
+              onChange={(e) => setSearch(e.target.value)}
               className="py-3 pl-[35px] outline-1 outline-gray-300 focus:outline-2 focus:outline-gray-500"
             />
             <CiSearch
@@ -40,7 +55,11 @@ const Apps = () => {
             />
           </div>
         </div>
-        <Allapps data={filteredApps}></Allapps>
+        {isSearching ? (
+          <LoadingSpinner />
+        ) : (
+          <Allapps data={filteredApps}></Allapps>
+        )}
       </div>
     </div>
   );

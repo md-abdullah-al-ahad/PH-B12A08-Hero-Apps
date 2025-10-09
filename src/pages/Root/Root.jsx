@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Outlet } from "react-router";
+import { Outlet, useNavigation } from "react-router";
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
+import LoadingSpinner from "../../Components/LoadingSpinner/LoadingSpinner";
 import { ToastContainer, toast } from "react-toastify";
 import {
   addToStoredInstalled,
@@ -29,14 +30,35 @@ const Root = () => {
     setInstalledApps(getStoredInstalled());
   }, []);
 
+  const navigation = useNavigation();
+
   return (
     <div className="">
-      <Navbar></Navbar>
-      <Outlet
-        context={{ installedApps, handleInstallApp, handleUninstallApp }}
-      />
+      <Navbar />
+      <div className="relative min-h-screen">
+        <div
+          className={`transition-all duration-300 ease-in-out ${
+            navigation.state === "loading"
+              ? "opacity-40 blur-[1px]"
+              : "opacity-100"
+          }`}
+        >
+          <Outlet
+            context={{ installedApps, handleInstallApp, handleUninstallApp }}
+          />
+        </div>
+        <div
+          className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${
+            navigation.state === "loading"
+              ? "opacity-100"
+              : "opacity-0 pointer-events-none"
+          }`}
+        >
+          <LoadingSpinner />
+        </div>
+      </div>
       <ToastContainer />
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 };
