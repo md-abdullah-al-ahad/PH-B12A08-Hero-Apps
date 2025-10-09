@@ -32,7 +32,7 @@ const Installations = () => {
   });
 
   return (
-    <div className="bg-base-100 min-h-screen">
+    <div className="bg-gray-100 min-h-screen">
       <div className="max-w-[1440px] mx-auto pt-10 px-6 pb-20">
         <div className="flex items-center justify-between mb-6">
           <h1 className="font-semibold text-xl text-[#001931]">
