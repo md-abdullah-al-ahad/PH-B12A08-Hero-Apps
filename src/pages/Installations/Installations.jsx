@@ -47,10 +47,10 @@ const Installations = () => {
               className="dropdown-content menu bg-base-100 rounded-box w-40 p-2 shadow"
             >
               <li>
-                <a onClick={() => setSortOrder("asc")}>Ascending</a>
+                <a onClick={() => setSortOrder("asc")}>Low-High</a>
               </li>
               <li>
-                <a onClick={() => setSortOrder("desc")}>Descending</a>
+                <a onClick={() => setSortOrder("desc")}>High-Low</a>
               </li>
             </ul>
           </div>
