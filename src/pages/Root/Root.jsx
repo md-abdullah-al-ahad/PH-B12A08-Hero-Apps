@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Outlet, useNavigation } from "react-router";
+import { Outlet, useNavigation, useLocation } from "react-router";
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
 import LoadingSpinner from "../../Components/LoadingSpinner/LoadingSpinner";
@@ -31,6 +31,11 @@ const Root = () => {
   }, []);
 
   const navigation = useNavigation();
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [location.pathname]);
 
   return (
     <div className="">
