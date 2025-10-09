@@ -25,11 +25,12 @@ const AppDetails = () => {
 
   if (!app) {
     return (
-      <div className="">
+      <div>
         <AppErrorPage />
       </div>
     );
   }
+
   const totalDownloads = (amount) => {
     if (amount >= 1_000_000_000)
       return `${(amount / 1_000_000_000).toFixed(1)}B`;
@@ -37,22 +38,23 @@ const AppDetails = () => {
     if (amount >= 1_000) return `${(amount / 1_000).toFixed(1)}K`;
     return amount.toString();
   };
+
   return (
-    <div className="bg-gray-50 min-h-screen py-8">
-      <div className="w-full max-w-[1440px] mx-auto bg-white border-t border-gray-200 shadow-sm px-8 py-10">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-start gap-10 w-full">
+    <div className="bg-gray-50 min-h-screen py-6 px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[1440px] mx-auto bg-white border-t border-gray-200 shadow-sm rounded-lg px-4 sm:px-8 py-8 sm:py-10">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-start gap-8 w-full">
           <div className="flex justify-center md:justify-start w-full md:w-auto">
             <img
               src={app.image}
               alt={app.title}
-              className="p-5 w-40 h-40 md:w-60 md:h-60 object-contain rounded-lg border border-gray-200 bg-white"
+              className="p-6 w-52 h-52 sm:w-60 sm:h-60 md:w-64 md:h-64 object-contain rounded-xl border border-gray-200 bg-white shadow-sm"
             />
           </div>
-          <div className="flex flex-col justify-center w-full">
-            <h1 className="text-2xl md:text-3xl font-semibold text-gray-900">
+          <div className="flex flex-col justify-center w-full text-center md:text-left">
+            <h1 className="text-3xl font-semibold text-gray-900">
               {app.title}
             </h1>
-            <p className="text-sm md:text-base text-gray-600 mt-1">
+            <p className="text-sm sm:text-base text-gray-600 mt-2">
               Developed by{" "}
               <span className="text-indigo-600 font-medium">
                 {app.companyName}
@@ -60,7 +62,7 @@ const AppDetails = () => {
             </p>
             <hr className="my-4 border-gray-300" />
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center sm:text-left">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center sm:justify-start gap-3">
                 <img src={downloadImg} alt="Downloads" className="w-7 h-7" />
                 <div>
                   <p className="text-sm text-gray-500">Downloads</p>
@@ -69,7 +71,7 @@ const AppDetails = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center sm:justify-start gap-3">
                 <img src={ratingImg} alt="Ratings" className="w-7 h-7" />
                 <div>
                   <p className="text-sm text-gray-500">Average Ratings</p>
@@ -78,7 +80,7 @@ const AppDetails = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center sm:justify-start gap-3">
                 <img src={iconReviewImg} alt="Reviews" className="w-7 h-7" />
                 <div>
                   <p className="text-sm text-gray-500">Total Reviews</p>
@@ -88,11 +90,11 @@ const AppDetails = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-8 flex gap-4">
+            <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
               {!isInstalled ? (
                 <button
                   onClick={() => handleInstallApp(app.id)}
-                  className="bg-green-500 text-white px-8 py-3 rounded-md text-base font-medium hover:bg-green-600 transition"
+                  className="bg-green-500 cursor-pointer text-white px-8 py-3 rounded-md text-base font-medium hover:bg-green-600 transition"
                 >
                   Install Now ({app.size} MB)
                 </button>
@@ -106,7 +108,7 @@ const AppDetails = () => {
                   </button>
                   <button
                     onClick={() => handleUninstallApp(app.id)}
-                    className="bg-red-500 text-white px-8 py-3 rounded-md text-base font-medium hover:bg-red-600 transition"
+                    className="bg-red-500 cursor-pointer text-white px-8 py-3 rounded-md text-base font-medium hover:bg-red-600 transition"
                   >
                     Uninstall
                   </button>
@@ -118,14 +120,15 @@ const AppDetails = () => {
 
         <hr className="my-8 border-gray-300" />
         <div>
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">Ratings</h2>
-
-          <div className="w-full h-80">
-            <ResponsiveContainer width="100%" height="100%">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center md:text-left">
+            Ratings
+          </h2>
+          <div className="w-full h-64 sm:h-80 flex justify-start">
+            <ResponsiveContainer width="95%" height="100%">
               <BarChart
                 data={app.ratings}
                 layout="vertical"
-                margin={{ top: 10, right: 30, left: 40, bottom: 10 }}
+                margin={{ top: 10, right: 10, left: 0, bottom: 10 }}
               >
                 <CartesianGrid strokeDasharray="3 3" stroke="#e0e0e0" />
                 <XAxis
@@ -146,7 +149,6 @@ const AppDetails = () => {
                     borderRadius: "8px",
                   }}
                 />
-                <Legend />
                 <Bar
                   dataKey="count"
                   fill="#6366F1"
@@ -156,11 +158,15 @@ const AppDetails = () => {
               </BarChart>
             </ResponsiveContainer>
           </div>
-          <div>
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4 mt-10">
-              Description
-            </h2>
-            <p className="text-gray-700">{app.description}</p>
+        </div>
+        <div className="mt-10">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center md:text-left">
+            Description
+          </h2>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 sm:p-6 text-gray-700 leading-relaxed shadow-sm">
+            <p className="text-base sm:text-lg whitespace-pre-line">
+              {app.description}
+            </p>
           </div>
         </div>
       </div>
