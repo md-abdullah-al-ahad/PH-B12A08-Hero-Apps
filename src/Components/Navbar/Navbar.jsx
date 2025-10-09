@@ -1,19 +1,40 @@
 import React from "react";
-import { Link, NavLink } from "react-router";
+import { NavLink } from "react-router";
 import logo from "/src/assets/images/logo.png";
 import { FaGithub } from "react-icons/fa";
 const Navbar = () => {
   const links = (
     <>
-      <NavLink to="/">
-        <li className="">Home</li>
-      </NavLink>
-      <NavLink to="/Apps">
-        <li className="">Apps</li>
-      </NavLink>
-      <NavLink to="/Installations">
-        <li className="">Installations</li>
-      </NavLink>
+      <li>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? "text-[#9F62F2] underline decoration-[#9F62F2]" : ""
+          }
+        >
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/Apps"
+          className={({ isActive }) =>
+            isActive ? "text-[#9F62F2] underline decoration-[#9F62F2]" : ""
+          }
+        >
+          Apps
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/Installations"
+          className={({ isActive }) =>
+            isActive ? "text-[#9F62F2] underline decoration-[#9F62F2]" : ""
+          }
+        >
+          Installations
+        </NavLink>
+      </li>
     </>
   );
   return (

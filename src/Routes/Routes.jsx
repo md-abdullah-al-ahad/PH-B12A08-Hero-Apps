@@ -17,17 +17,17 @@ const Routes = createBrowserRouter([
         index: true,
         path: "/",
         Component: Home,
-        loader: () => fetch("../../src/assets/trendingData/trendingData.json"),
+        loader: () => fetch("/data/trendingData.json"),
       },
       {
         path: "/Apps",
         Component: Apps,
-        loader: () => fetch("../../src/assets/appsData/appsData.json"),
+        loader: () => fetch("/data/appsData.json"),
       },
       {
         path: "/Apps/:id",
         Component: AppDetails,
-        loader: () => fetch("../../src/assets/appsData/appsData.json"),
+        loader: () => fetch("/data/appsData.json"),
       },
       {
         path: "/Installations",
