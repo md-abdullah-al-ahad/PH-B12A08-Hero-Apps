@@ -25,17 +25,17 @@ const Apps = () => {
   return (
     <div className="bg-gray-100">
       <div className="flex flex-col items-center gap-6 max-w-[1440px] mx-auto pt-10 px-5">
-        <h1 className="font-bold text-5xl text-[#001931]">
+        <h1 className="font-bold text-5xl text-[#001931] text-center">
           Our All Applications
         </h1>
-        <p className="text-xl text-[#627382]">
+        <p className="text-xl text-[#627382] text-center">
           Explore All Apps on the Market developed by us. We code for Millions
         </p>
-        <div className="flex items-center justify-between w-[100%]">
-          <div className="font-semibold text-[#001931] text-2xl">
+        <div className="flex flex-col md:flex-row  items-center justify-between w-[100%]">
+          <div className="font-semibold text-[#001931] text-2xl w-[full] md:w-auto mb-6 md:mb-0 text-center">
             ({filteredApps.length}) Apps Found
           </div>
-          <div className="relative">
+          <div className="relative w-[full]">
             <input
               type="text"
               placeholder="Search Apps"
