@@ -38,7 +38,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 max-w-[1440px] mx-auto">
+    <div className="navbar bg-base-100 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -49,36 +49,41 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              {" "}
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
                 d="M4 6h16M4 12h8m-8 6h16"
-              />{" "}
+              />
             </svg>
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-[16px] font-semibold text-black"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow text-[16px] font-semibold text-black"
           >
             {links}
           </ul>
         </div>
         <div className="flex items-center justify-center">
           <a href="/">
-            <img className="w-[30px] h-[30px]" src={logo} alt="" />
+            <img
+              className="w-[30px] h-[30px] object-contain"
+              src={logo}
+              alt=""
+            />
           </a>
           <a href="/" className="btn btn-ghost text-xl">
             HERO.IO
           </a>
         </div>
       </div>
+
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 flex item-center gap-2 text-[16px] font-semibold text-black">
+        <ul className="menu menu-horizontal px-1 flex items-center gap-2 text-[16px] font-semibold text-black">
           {links}
         </ul>
       </div>
+
       <div className="navbar-end">
         <a
           className="cursor-pointer flex items-center gap-2 justify-center px-4 py-2 text-white font-medium 

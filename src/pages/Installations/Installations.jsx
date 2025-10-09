@@ -9,11 +9,11 @@ const Installations = () => {
   const [sortOrder, setSortOrder] = useState(null);
 
   useEffect(() => {
-    fetch("../../src/assets/appsData/appsData.json")
+    fetch("/data/appsData.json")
       .then((res) => res.json())
-      .then((data) => setAppsData(data));
+      .then((data) => setAppsData(data))
+      .catch(() => setAppsData([]));
   }, []);
-
   const installedAppsData = appsData.filter((app) =>
     installedApps.includes(app.id)
   );
