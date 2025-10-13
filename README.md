@@ -10,6 +10,7 @@
 ---
 
 ## Table of Contents
+
 1. [Live Demo](#live-demo)
 2. [Highlights](#highlights)
 3. [Feature Overview](#feature-overview)
@@ -27,6 +28,7 @@
 ---
 
 ## Live Demo
+
 - Hosted build: **https://appkhuji.netlify.app/**
 
 <a href="https://appkhuji.netlify.app/" target="_blank">
@@ -36,6 +38,7 @@
 ---
 
 ## Highlights
+
 - Home page hero introduces the studio narrative and shows high-level engagement metrics.
 - Loader-driven trending grid surfaces curated products from static JSON feeds.
 - Dynamic detail pages pair rich metadata with an interactive ratings bar chart and install actions.
@@ -46,14 +49,14 @@
 
 ## Feature Overview
 
-| Section              | Summary                                                                 |
-|----------------------|-------------------------------------------------------------------------|
-| Marketing Hero       | Branded landing section with app store CTAs and social proof metrics.   |
-| Trending Spotlight   | Responsive card grid driven by `/data/trendingData.json`.               |
-| App Catalog          | Debounced search filtering over `/data/appsData.json` with spinner UX. |
-| App Details          | Deep dive route (`/Apps/:id`) with Recharts analytics and install flow.|
-| Installations Hub    | Sorted list of installed apps backed by persistent state.              |
-| Error Handling       | Custom 404 screens for invalid routes and missing app IDs.             |
+| Section            | Summary                                                                 |
+| ------------------ | ----------------------------------------------------------------------- |
+| Marketing Hero     | Branded landing section with app store CTAs and social proof metrics.   |
+| Trending Spotlight | Responsive card grid driven by `/data/trendingData.json`.               |
+| App Catalog        | Debounced search filtering over `/data/appsData.json` with spinner UX.  |
+| App Details        | Deep dive route (`/Apps/:id`) with Recharts analytics and install flow. |
+| Installations Hub  | Sorted list of installed apps backed by persistent state.               |
+| Error Handling     | Custom 404 screens for invalid routes and missing app IDs.              |
 
 - [x] Instant navigation via React Router.
 - [x] Consistent visual language through Tailwind tokens and DaisyUI components.
@@ -62,6 +65,7 @@
 ---
 
 ## Tech Stack
+
 - React 19 and React Router 7
 - Vite for lightning-fast builds and dev server
 - Tailwind CSS v4 + DaisyUI component primitives
@@ -71,6 +75,7 @@
 ---
 
 ## Getting Started
+
 > **Prerequisites:** Node.js 18+ and npm.
 
 ```bash
@@ -90,6 +95,7 @@ npm run preview
 ---
 
 ## Available Scripts
+
 - `npm run dev` — start the Vite development server with hot module reloading.
 - `npm run build` — generate an optimized production bundle.
 - `npm run preview` — serve the built assets locally for smoke testing.
@@ -98,6 +104,7 @@ npm run preview
 ---
 
 ## Project Structure
+
 ```text
 public/
   data/
@@ -121,6 +128,7 @@ src/
 ---
 
 ## Data Sources
+
 - `public/data/trendingData.json` powers the home page spotlight.
 - `public/data/appsData.json` feeds the catalog, detail view, and installations dashboard.
 - Assets in `public/` and `src/assets/` are referenced directly by the cards and hero components.
@@ -128,6 +136,7 @@ src/
 ---
 
 ## Application Flow
+
 1. **Home:** Loader fetches trending data and renders the marketing hero plus featured grid.
 2. **Apps:** Catalog view fetches the main dataset and performs debounced search filtering with spinner feedback.
 3. **App Details:** Route lookup by ID, render analytics chart, and manage install/uninstall state via outlet context.
@@ -137,6 +146,7 @@ src/
 ---
 
 ## Persistence & Notifications
+
 - Installation state is centralized in `pages/Root/Root.jsx`, exposing install/uninstall handlers through `Outlet` context.
 - `src/utils/storage.js` abstracts reads and writes to `localStorage`, ensuring persistence across sessions.
 - Toast messages confirm each action, keeping users informed without leaving the current route.
@@ -144,6 +154,7 @@ src/
 ---
 
 ## Deployment Notes
+
 - The `_redirects` file under `public/` enables SPA-friendly routing on hosts like Netlify.
 - Update the GitHub and social links in the navbar/footer to reflect your organization before going live.
 - For custom domains on Netlify, adjust the site settings and re-deploy.
@@ -151,11 +162,9 @@ src/
 ---
 
 ## Contributing
+
 1. Fork the repository.
 2. Create a feature branch: `git checkout -b feature/your-update`.
 3. Commit your changes and open a pull request.
 
 ---
-
-## License
-No license has been specified. Add a LICENSE file if you plan to distribute or open-source the project.
